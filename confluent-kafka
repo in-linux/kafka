@@ -16,13 +16,12 @@ https://docs.docker.com/compose/install/
 
 How to install docker compose alternative method
 
-```shell
-sudo apt update
-sudo apt install -y docker
-sudo usermod -aG docker ec2-user
-sudo service docker start
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+```sh
+sudo apt install -y docker;
+sudo usermod -aG docker ec2-user;
+sudo service docker start;
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose;
+chmod +x /usr/local/bin/docker-compose;
 docker-compose --version
 ```
 
