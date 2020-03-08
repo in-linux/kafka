@@ -16,7 +16,7 @@ https://docs.docker.com/compose/install/
 
 How to install docker compose alternative method
 
-```sh
+```shell
 sudo apt install -y docker;
 sudo usermod -aG docker ec2-user;
 sudo service docker start;
@@ -25,45 +25,38 @@ chmod +x /usr/local/bin/docker-compose;
 docker-compose --version
 ```
 
-------------------------------------------------
+Uninstall the Docker CE:
 
-#  ┌┬┐┌─┐┌─┐┬┌─┌─┐┬─┐  ┌─┐┌─┐  ┬┌┐┌┌─┐┌┬┐┌─┐┬  ┬  
-#   │││ ││  ├┴┐├┤ ├┬┘  │  ├┤   ││││└─┐ │ ├─┤│  │  
-#  ─┴┘└─┘└─┘┴ ┴└─┘┴└─  └─┘└─┘  ┴┘└┘└─┘ ┴ ┴ ┴┴─┘┴─┘
-
-https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/
-------------------------------------------------
-
-#  ┌┬┐┌─┐┌─┐┬┌─┌─┐┬─┐  ┌─┐┌─┐  ┬ ┬┌┐┌┬┌┐┌┌─┐┌┬┐┌─┐┬  ┬  
-#   │││ ││  ├┴┐├┤ ├┬┘  │  ├┤   │ ││││││││└─┐ │ ├─┤│  │  
-#  ─┴┘└─┘└─┘┴ ┴└─┘┴└─  └─┘└─┘  └─┘┘└┘┴┘└┘└─┘ ┴ ┴ ┴┴─┘┴─┘
-
-Uninstall Docker CE
-Uninstall the Docker CE package:
-	# sudo apt-get purge docker-ce
-
+```shell
+sudo apt-get purge docker-ce
+```
 Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes:
 
-	# sudo rm -rf /var/lib/docker
+```shell
+sudo rm -rf /var/lib/docker
 You must delete any edited configuration files manually.
+```
 
-------------------------------------------------
+Docker compose file = config file (obrazy ISO systemów które mają być uruchomione)
 
-#  ┌┬┐┌─┐┌─┐┬┌─┌─┐┬─┐  ┌┐ ┌─┐┌─┐┬┌─┐
-#   │││ ││  ├┴┐├┤ ├┬┘  ├┴┐├─┤└─┐││  
-#  ─┴┘└─┘└─┘┴ ┴└─┘┴└─  └─┘┴ ┴└─┘┴└─┘
+```
+docker-compose.yaml
+```
+Display all containers running and stoped {a = all}
+```
+docker ps -a
+```
+Display last used container
+```
+docker ps -al
+```
 
-docker-compose.yml						#config file (obrazy ISO systemów które mają być uruchomione)
-docker ps -a							#display all containers running and stoped {a = all}
-docker ps -al							#display last used container
-
-------------------------------------------------
 
 #  ┬┌─┌─┐┌─┐┬┌─┌─┐  ┌─┐┌─┐┌┐┌┌─┐┬  ┬ ┬┌─┐┌┐┌┌┬┐  ┬ ┬┌─┐┌─┐┬─┐┌─┐┌─┐┌─┐  
 #  ├┴┐├─┤├┤ ├┴┐├─┤  │  │ ││││├┤ │  │ │├┤ │││ │   │ │├─┘│ ┬├┬┘├─┤│ ┬├┤   
 #  ┴ ┴┴ ┴└  ┴ ┴┴ ┴  └─┘└─┘┘└┘└  ┴─┘└─┘└─┘┘└┘ ┴   └─┘┴  └─┘┴└─┴ ┴└─┘└─┘  
 
-Poprostu wyedytuj wersję oprogramowania w pliku docker-compose.yml
+Poprostu wyedytuj wersję oprogramowania w pliku docker-compose.yaml
 a następnie wykonaj polecenie: docker-compose up -d
 
 ------------------------------------------------
