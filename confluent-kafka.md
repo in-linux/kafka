@@ -3,14 +3,14 @@ KAFKA CHEAT SHEET
 
 How to install docker engine
 
-```url
+```
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 https://docs.docker.com/install/linux/docker-ce/centos/
 ```
 
 How to install docker compose
 
-```url
+```
 https://docs.docker.com/compose/install/
 ```
 
