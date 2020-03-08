@@ -16,7 +16,7 @@ https://docs.docker.com/compose/install/
 
 How to install docker compose alternative method
 
-```bash
+```shell
 sudo apt update
 sudo apt install -y docker
 sudo usermod -aG docker ec2-user
